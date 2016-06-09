@@ -1,0 +1,15 @@
+// styles in src/style directory are applied to the whole page
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,100);
+body {
+    background: #E0DFD5;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+a {
+    color: #03A9F4;
+    text-decoration: none;
+}
+
+h1, h2, h3{
+	font-weight: 200;
+}

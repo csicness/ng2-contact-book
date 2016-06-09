@@ -1,0 +1,35 @@
+// styles applied on :host are applied on the current component, "app" in this case
+:host {
+  display: block;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #C0BEAD;
+
+  a {
+      float: left;
+      color: #000;
+      padding: 15px;
+      border: 1px solid #C0BEAD;
+      border-raidus: 8px;
+
+      &:hover {
+        background-color: #eee;
+      }
+  }
+}
+
+.active {
+  background-color: #eee;
+}
+
+main {
+  padding: 1em;
+  text-align: center;
+  margin-top: 50px;
+  display: block;
+}

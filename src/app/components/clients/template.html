@@ -1,0 +1,39 @@
+<h2>Add</h2>
+<form [ngFormModel]="myForm" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div>
+        <label for="firstName">First Name</label>
+        <input type="text" [ngFormControl]="myForm.controls['firstName']">
+    </div>
+    <div>
+        <label for="">Last Name</label>
+        <input type="text" [ngFormControl]="myForm.controls['lastName']">
+    </div>
+    <div>
+        <label for="">Phone</label>
+        <input type="text" [ngFormControl]="myForm.controls['phone']">
+    </div>
+    <div>
+        <label for="">Email</label>
+        <input type="text" [ngFormControl]="myForm.controls['email']">
+    </div>
+    <div>
+        <label for="">Address</label>
+        <input type="text" [ngFormControl]="myForm.controls['address']">
+    </div>
+    <div>
+        <label for="">City</label>
+        <input type="text" [ngFormControl]="myForm.controls['city']">
+    </div>
+    <div>
+        <label for="">State</label>
+        <input type="text" [ngFormControl]="myForm.controls['state']">
+    </div>
+    <div>
+        <label for="">Zip</label>
+        <input type="text" [ngFormControl]="myForm.controls['zip']">
+    </div>
+    <div class="btn-container">
+      <button type="submit">Save</button>
+      <button [routerLink]="['Home']">Cancel</button>
+    </div>
+</form>

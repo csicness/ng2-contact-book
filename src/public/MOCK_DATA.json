@@ -1,0 +1,59 @@
+{ 
+	"clients":	[
+		{
+			"id":1,
+			"first_name":"Elizabeth",
+			"last_name":"Watson",
+			"email":"ewatson0@nytimes.com",
+			"phone":"1-(775)886-3623",
+			"address":"55 Dovetail Ave",
+			"city":"Reno",
+			"state":"Nevada",
+			"zip":"89510"
+		},
+		{
+			"id":2,
+			"first_name":"Joshua",
+			"last_name":"Daniels",
+			"email":"jdaniels1@paypal.com",
+			"phone":"1-(559)622-7514",
+			"address":"86 Dryden st.",
+			"city":"Fresno",
+			"state":"California",
+			"zip":"93794"
+		},
+		{
+			"id":3,
+			"first_name":"Howard",
+			"last_name":"Cook",
+			"email":"hcook2@list-manage.com",
+			"phone":"1-(714)725-0336",
+			"address":"79 Coleman Hill",
+			"city":"Brea",
+			"state":"California",
+			"zip":"92822"
+		},
+		{
+			"id":4,
+			"first_name":"Henry",
+			"last_name":"Sullivan",
+			"email":"hsullivan3@seesaa.net",
+			"phone":"1-(585)244-6091",
+			"address":"22 Jay Rd.",
+			"city":"Rochester",
+			"state":"New York",
+			"zip":"14652"
+		},
+		{
+			"id":5,
+			"first_name":"Shirley",
+			"last_name":"Arnold",
+			"email":"sarnold4@mapquest.com",
+			"phone":"1-(515)896-9989",
+			"address":"27 Sheridan Ave.",
+			"city":"Des Moines",
+			"state":"Iowa",
+			"zip":"50981"
+		}
+	] 
+}

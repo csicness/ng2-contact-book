@@ -1,0 +1,50 @@
+// component styles are encapsulated and only applied to their components
+table {
+  margin: 0 auto;
+  border: 1px solid black;
+  th {
+    border-bottom: 1px solid black;
+  }
+  td {
+    border-bottom: 1px solid black;
+    padding: 5px 10px;
+    font-weight: 400;
+  }
+
+  tbody tr:hover {
+    background-color: #F2F1E6;
+    cursor: default;
+  }
+
+}
+
+a {
+  cursor: pointer;
+}
+
+.btn {
+  color: #555;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+#add {
+  margin-top: 25px;
+}
+
+.addClient {
+  border: 0.5px dashed black;
+
+  &:hover {
+    background-color: salmon;
+  }
+}
+
+.btn-edit {
+  background-color: #CACFEB;
+}
+
+.btn-delete {
+  background-color: #E8A48E;
+}
