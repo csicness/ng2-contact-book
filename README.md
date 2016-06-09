@@ -1,7 +1,7 @@
-Angular 2 Contact Book App
+## Angular 2 Contact Book
 * Signal page application built with Angular 2
 
-## Work in progress
+### ..Work in progress..
 
 ### Quick start
 
