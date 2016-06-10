@@ -1,8 +1,8 @@
 import { Component, OnInit } from 'angular2/core';
 import { FormBuilder, ControlGroup } from 'angular2/common';
 import { ROUTER_DIRECTIVES } from 'angular2/router';
-import { ClientService } from '../home/client.service';
-import { Client } from '../home/client';
+import { ClientService } from '../shared/client.service';
+import { Client } from '../shared/client';
 
 @Component({
 	template: require('./editTemplate.html'),

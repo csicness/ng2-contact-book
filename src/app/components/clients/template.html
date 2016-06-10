@@ -2,11 +2,11 @@
 <form [ngFormModel]="myForm" (ngSubmit)="onSubmit()" #f="ngForm">
     <div>
         <label for="firstName">First Name</label>
-        <input type="text" [ngFormControl]="myForm.controls['firstName']">
+        <input type="text" [ngFormControl]="myForm.controls['first_name']">
     </div>
     <div>
         <label for="">Last Name</label>
-        <input type="text" [ngFormControl]="myForm.controls['lastName']">
+        <input type="text" [ngFormControl]="myForm.controls['last_name']">
     </div>
     <div>
         <label for="">Phone</label>

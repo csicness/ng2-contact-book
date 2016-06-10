@@ -1,27 +1,24 @@
 import { Component, OnInit, Input } from 'angular2/core';
 import { FormBuilder, ControlGroup } from 'angular2/common';
-import { ROUTER_DIRECTIVES } from 'angular2/router';
-import { ClientService } from '../home/client.service';
-import { ClientList } from '../home/client-list';
-import { Client } from '../home/client';
+import { ROUTER_DIRECTIVES, Router } from 'angular2/router';
+import { ClientService } from '../shared/client.service';
+import { Client } from '../shared/client';
 
 @Component({
 	template: require('./template.html'),
 	styles: [require('./styles.scss')],
-	providers: [ClientService],
 	directives: [ROUTER_DIRECTIVES]
 })
 
 export class AddClientComponent implements OnInit {
-	@Input() clients: any[];
 	myForm: ControlGroup;
 	client: Client;
-	clientList: any[];
 	private _submitted = false;
 
 	constructor(
 		private _clientService: ClientService,
-		private _formBuilder: FormBuilder
+		private _formBuilder: FormBuilder,
+		private _router: Router
 	) {}
 
 	ngOnInit(): any {
@@ -37,8 +34,8 @@ export class AddClientComponent implements OnInit {
 
 		this.myForm = this._formBuilder.group({
 			id,
-			firstName: [fbFirstName],
-			lastName: [fbLastName],
+			first_name: [fbFirstName],
+			last_name: [fbLastName],
 			phone: [fbPhone],
 			email: [fbEmail],
 			address: [fbAddress],
@@ -50,9 +47,13 @@ export class AddClientComponent implements OnInit {
 
 	onSubmit() {
 		this.client = this.myForm.value;
-		console.log(this.client);
-		ClientList.push(this.client);
+		this._clientService.addClient(this.client);
 		this._submitted = true;
+		this.navigateBack();
+	}
+
+	private navigateBack() {
+		this._router.navigate(['Home']);
 	}
 
 

@@ -2,6 +2,7 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, Router} from 'angular2/router';
 import {FORM_PROVIDERS} from 'angular2/common';
+import { ClientService } from './components/shared/index';
 
 import '../style/app.scss';
 
@@ -14,7 +15,7 @@ import routes from './routes';
  */
 @Component({
     selector: 'app', // <app></app>
-    providers: [...FORM_PROVIDERS, Api],
+    providers: [...FORM_PROVIDERS, Api, ClientService],
     directives: [...ROUTER_DIRECTIVES],
     pipes: [],
     styles: [require('./style.scss')],
