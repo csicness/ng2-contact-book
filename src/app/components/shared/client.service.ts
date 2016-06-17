@@ -8,20 +8,21 @@ import { Client } from './client';
 
 @Injectable()
 export class ClientService {
-	
+
 	clients: Client[] = [];
-	
+
 	private _url = 'MOCK_DATA.json';
 	private request: Observable<string[]>;
-	
+
 	constructor(private _http: Http) { }
 
 	getClients(): Observable<any[]> {
 		if (this.clients && this.clients.length) {
-			return Observable.from([this.clients]);
+			return Observable.from([this.clients], client => this.clients = client);
 		}
 		if (!this.request) {
 			this.request = this._http.get(this._url)
+				.catch(this.handleError)
 				.map(this.extractData)
 				.map((data: any[]) => {
 					this.request = null;
@@ -29,6 +30,14 @@ export class ClientService {
 				});
 		}
 		return this.request;
+	}
+
+	getClientIndex(client) {
+		return this.clients.indexOf(client);
+	}
+
+	getClient(index: number) {
+		return this.clients[index];
 	}
 
 	addClient(client: Client) {
@@ -51,6 +60,10 @@ export class ClientService {
 	// private getClientUrl(clientId) {
 	// 	return this._url + "/clients/" + clientId;
 	// }
+
+	editClient(client: Client, index: number) {
+		return this.clients[index] = client;
+	}
 
 	private extractData(res: Response) {
 		if (res.status < 200 || res.status >= 300) {

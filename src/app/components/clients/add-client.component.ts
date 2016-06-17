@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from 'angular2/core';
+import { Component, OnInit } from 'angular2/core';
 import { FormBuilder, ControlGroup } from 'angular2/common';
 import { ROUTER_DIRECTIVES, Router } from 'angular2/router';
 import { ClientService } from '../shared/client.service';

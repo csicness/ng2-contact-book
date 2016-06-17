@@ -2,35 +2,35 @@
 <form [ngFormModel]="myForm" (ngSubmit)="onSubmit()" #f="ngForm">
     <div>
         <label for="firstName">First Name</label>
-        <input type="text" [ngFormControl]="myForm.controls['firstName']">
+        <input type="text" [ngFormControl]="myForm.controls['first_name']" [ngModel]="client.first_name">
     </div>
     <div>
         <label for="">Last Name</label>
-        <input type="text" [ngFormControl]="myForm.controls['lastName']">
+        <input type="text" [ngFormControl]="myForm.controls['last_name']" [ngModel]="client.last_name">
     </div>
     <div>
         <label for="">Phone</label>
-        <input type="text" [ngFormControl]="myForm.controls['phone']">
+        <input type="text" [ngFormControl]="myForm.controls['phone']" [ngModel]="client.phone">
     </div>
     <div>
         <label for="">Email</label>
-        <input type="text" [ngFormControl]="myForm.controls['email']">
+        <input type="text" [ngFormControl]="myForm.controls['email']" [ngModel]="client.email">
     </div>
     <div>
         <label for="">Address</label>
-        <input type="text" [ngFormControl]="myForm.controls['address']">
+        <input type="text" [ngFormControl]="myForm.controls['address']" [ngModel]="client.address">
     </div>
     <div>
         <label for="">City</label>
-        <input type="text" [ngFormControl]="myForm.controls['city']">
+        <input type="text" [ngFormControl]="myForm.controls['city']" [ngModel]="client.city">
     </div>
     <div>
         <label for="">State</label>
-        <input type="text" [ngFormControl]="myForm.controls['state']">
+        <input type="text" [ngFormControl]="myForm.controls['state']" [ngModel]="client.state">
     </div>
     <div>
         <label for="">Zip</label>
-        <input type="text" [ngFormControl]="myForm.controls['zip']">
+        <input type="text" [ngFormControl]="myForm.controls['zip']" [ngModel]="client.zip">
     </div>
     <div class="btn-container">
       <button type="submit">Save</button>

@@ -23,7 +23,7 @@
             <td>{{ client.state }}</td>
             <td>{{ client.zip }}</td>
             <td>
-                <a [routerLink]="['EditClient']"><img [src]="editIcon" width="50%"></a>
+                <a (click)="onSelect(client)"><img [src]="editIcon" width="50%"></a>
             </td>
             <td>
                 <a (click)="onDelete(client)"><img [src]="trashIcon" width="50%"/></a>
