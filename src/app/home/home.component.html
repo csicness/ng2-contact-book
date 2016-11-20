@@ -1,0 +1,31 @@
+<table class="responsive-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contacts">
+            <td>{{ contact.first_name }} {{ contact.last_name }}</td>
+            <td>{{ contact.phone }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.address }}</td>
+            <td>{{ contact.city }}</td>
+            <td>{{ contact.state }}</td>
+            <td>{{ contact.zip }}</td>
+            <td [routerLink]="['/add', contact.id]">O</td>
+            <td (click)="onDelete(contact)">X</td>
+        </tr>
+    </tbody>
+</table>
+<div id="add">
+    <a class="btn addcontact" routerLink="/add">Add Contact</a>
+</div>

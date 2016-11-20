@@ -1,0 +1,81 @@
+// component styles are encapsulated and only applied to their components
+table {
+  margin: 0 auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+
+  tr {
+    border: 1px solid black;
+  }
+
+  th {
+    border-bottom: 1px solid #364043;
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 0.5em 1em;
+  }
+
+  td {
+    padding: 5px 10px;
+    font-weight: 400;
+
+    &:nth-child(7) {
+      border-right: 1px solid black;
+    }
+
+    &:nth-child(8) {
+      border-right: 1px solid black;
+      color: salmon;
+      transition: background-color 1s linear;
+      
+      &:hover {
+        cursor: pointer;
+        background-color: lightgreen;
+        color: #364043;
+      }
+    }
+
+    &:nth-child(9) {
+      color: salmon;
+      transition: background-color 1s linear;
+
+      &:hover {
+        cursor: pointer;
+        background-color: crimson;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  tbody tr:hover {
+    background-color: #F2F1E6;
+    cursor: default;
+  }
+
+}
+
+.btn {
+  color: darksalmon;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: color 1s ease;
+
+  &:hover {
+    color: mediumorchid;
+  }
+}
+
+#add {
+  margin-top: 25px;
+}
+
+.addClient {
+  border: 0.5px dashed darksalmon;
+
+  &:hover {
+    background-color: #F2F1E6;
+  }
+}

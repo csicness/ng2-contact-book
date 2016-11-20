@@ -1,0 +1,15 @@
+* {
+  color: mediumorchid;
+}
+
+#links {
+  word-spacing: 10px;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 3px solid mediumorchid;
+  }
+}
